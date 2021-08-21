@@ -11,6 +11,7 @@ export const schema = gql`
   type Query {
     urls: [Url!]!
     url(id: Int!): Url
+    findBySlug(slug: String!): Url
   }
 
   input CreateUrlInput {

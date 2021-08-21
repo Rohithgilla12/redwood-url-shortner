@@ -19,6 +19,10 @@ export const url = ({ id }: Prisma.UrlWhereUniqueInput) => {
   })
 }
 
+export const findBySlug = ({ slug }: Prisma.UrlWhereUniqueInput) => {
+  return db.url.findUnique({ where: { slug } })
+}
+
 interface CreateUrlArgs {
   input: Prisma.UrlCreateInput
 }
