@@ -1,7 +1,12 @@
 import { Link, routes } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
+import FindBySlugCell from 'src/components/FindBySlugCell'
 
-const AppPage = () => {
+type AppPageProps = {
+  slug?: string
+}
+
+const AppPage = ({ slug }: AppPageProps) => {
   return (
     <>
       <MetaTags
@@ -11,6 +16,7 @@ const AppPage = () => {
         You can look at this documentation for best practices : https://developers.google.com/search/docs/advanced/appearance/good-titles-snippets */
       />
       <h1>AppPage</h1>
+      {slug && <FindBySlugCell id={slug} />}
       <p>
         Find me in <code>./web/src/pages/AppPage/AppPage.tsx</code>
       </p>

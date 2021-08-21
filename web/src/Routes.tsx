@@ -20,6 +20,7 @@ const Routes = () => {
         <Route path="/urls" page={UrlUrlsPage} name="urls" />
       </Set>
       <Route path="/" page={AppPage} name="app" />
+      <Route path="/{slug:String}" page={AppPage} name="app" />
       <Route notfound page={NotFoundPage} />
     </Router>
   )

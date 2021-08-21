@@ -48,26 +48,33 @@ const Url = ({ url }) => {
     <>
       <div className="rw-segment">
         <header className="rw-segment-header">
-          <h2 className="rw-heading rw-heading-secondary">Url {url.id} Detail</h2>
+          <h2 className="rw-heading rw-heading-secondary">
+            Url {url.id} Detail
+          </h2>
         </header>
         <table className="rw-table">
           <tbody>
             <tr>
               <th>Id</th>
               <td>{url.id}</td>
-            </tr><tr>
+            </tr>
+            <tr>
               <th>Long url</th>
               <td>{url.longUrl}</td>
-            </tr><tr>
+            </tr>
+            <tr>
               <th>Short url</th>
               <td>{url.shortUrl}</td>
-            </tr><tr>
+            </tr>
+            <tr>
               <th>Slug</th>
               <td>{url.slug}</td>
-            </tr><tr>
+            </tr>
+            <tr>
               <th>Views</th>
               <td>{url.views}</td>
-            </tr><tr>
+            </tr>
+            <tr>
               <th>Created at</th>
               <td>{timeTag(url.createdAt)}</td>
             </tr>
