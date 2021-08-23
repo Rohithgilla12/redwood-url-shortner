@@ -23,5 +23,7 @@ export const Failure = ({ error }: CellFailureProps) => (
 )
 
 export const Success = ({ findBySlug }: CellSuccessProps<FindBySlugQuery>) => {
+  // add mutation query to add a view
+  // window.location.href = findBySlug.longUrl
   return <div>{JSON.stringify(findBySlug)}</div>
 }
