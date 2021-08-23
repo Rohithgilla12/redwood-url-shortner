@@ -8,7 +8,6 @@ export const QUERY = gql`
     url: url(id: $id) {
       id
       longUrl
-      shortUrl
       slug
       views
       createdAt

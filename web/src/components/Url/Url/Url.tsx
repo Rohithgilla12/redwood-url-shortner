@@ -63,10 +63,6 @@ const Url = ({ url }) => {
               <td>{url.longUrl}</td>
             </tr>
             <tr>
-              <th>Short url</th>
-              <td>{url.shortUrl}</td>
-            </tr>
-            <tr>
               <th>Slug</th>
               <td>{url.slug}</td>
             </tr>

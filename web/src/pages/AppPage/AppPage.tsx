@@ -13,7 +13,9 @@ const AppPage = ({ slug }: AppPageProps) => {
       <MetaTags title="App" />
       <h1>URL shortner App</h1>
       {slug && <FindBySlugCell id={slug} />}
-      <NewUrlPage />
+      <div className="m-4">
+        <NewUrlPage />
+      </div>
     </AppPageLayout>
   )
 }

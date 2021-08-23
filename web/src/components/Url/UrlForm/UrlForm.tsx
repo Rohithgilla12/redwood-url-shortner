@@ -46,22 +46,6 @@ const UrlForm = (props) => {
         <FieldError name="longUrl" className="rw-field-error" />
 
         <Label
-          name="shortUrl"
-          className="rw-label"
-          errorClassName="rw-label rw-label-error"
-        >
-          Short url
-        </Label>
-        <TextField
-          name="shortUrl"
-          defaultValue={props.url?.shortUrl}
-          className="rw-input"
-          errorClassName="rw-input rw-input-error"
-          validation={{ required: true }}
-        />
-        <FieldError name="shortUrl" className="rw-field-error" />
-
-        <Label
           name="slug"
           className="rw-label"
           errorClassName="rw-label rw-label-error"
@@ -94,10 +78,7 @@ const UrlForm = (props) => {
         <FieldError name="views" className="rw-field-error" />
 
         <div className="rw-button-group">
-          <Submit
-            disabled={props.loading}
-            className="rw-button rw-button-blue"
-          >
+          <Submit disabled={props.loading} className="rw-button rw-button-blue">
             Save
           </Submit>
         </div>

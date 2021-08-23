@@ -12,7 +12,6 @@ export const QUERY = gql`
     url: url(id: $id) {
       id
       longUrl
-      shortUrl
       slug
       views
       createdAt
@@ -24,7 +23,6 @@ const UPDATE_URL_MUTATION = gql`
     updateUrl(id: $id, input: $input) {
       id
       longUrl
-      shortUrl
       slug
       views
       createdAt

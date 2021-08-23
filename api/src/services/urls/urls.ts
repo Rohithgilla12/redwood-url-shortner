@@ -37,6 +37,10 @@ interface UpdateUrlArgs extends Prisma.UrlWhereUniqueInput {
   input: Prisma.UrlUpdateInput
 }
 
+interface UpdateViewArgs extends Prisma.UrlWhereUniqueInput {
+  count: number
+}
+
 export const updateUrl = ({ id, input }: UpdateUrlArgs) => {
   return db.url.update({
     data: input,
@@ -47,5 +51,12 @@ export const updateUrl = ({ id, input }: UpdateUrlArgs) => {
 export const deleteUrl = ({ id }: Prisma.UrlWhereUniqueInput) => {
   return db.url.delete({
     where: { id },
+  })
+}
+
+export const incrementViews = ({ id, count }: UpdateViewArgs) => {
+  return db.url.update({
+    where: { id },
+    data: { views: count },
   })
 }

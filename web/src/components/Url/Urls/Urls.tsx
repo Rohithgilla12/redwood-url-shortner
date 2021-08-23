@@ -63,7 +63,6 @@ const UrlsList = ({ urls }) => {
           <tr>
             <th>Id</th>
             <th>Long url</th>
-            <th>Short url</th>
             <th>Slug</th>
             <th>Views</th>
             <th>Created at</th>
@@ -75,7 +74,6 @@ const UrlsList = ({ urls }) => {
             <tr key={url.id}>
               <td>{truncate(url.id)}</td>
               <td>{truncate(url.longUrl)}</td>
-              <td>{truncate(url.shortUrl)}</td>
               <td>{truncate(url.slug)}</td>
               <td>{truncate(url.views)}</td>
               <td>{timeTag(url.createdAt)}</td>

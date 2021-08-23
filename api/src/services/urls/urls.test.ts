@@ -16,11 +16,10 @@ describe('urls', () => {
 
   scenario('creates a url', async () => {
     const result = await createUrl({
-      input: { longUrl: 'String', shortUrl: 'String', slug: 'String5202037' },
+      input: { longUrl: 'String', slug: 'String5202037' },
     })
 
     expect(result.longUrl).toEqual('String')
-    expect(result.shortUrl).toEqual('String')
     expect(result.slug).toEqual('String5202037')
   })
 

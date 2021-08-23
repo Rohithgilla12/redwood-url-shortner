@@ -2,7 +2,6 @@ export const schema = gql`
   type Url {
     id: Int!
     longUrl: String!
-    shortUrl: String!
     slug: String!
     views: Int!
     createdAt: DateTime!
@@ -16,14 +15,12 @@ export const schema = gql`
 
   input CreateUrlInput {
     longUrl: String!
-    shortUrl: String!
     slug: String!
     views: Int!
   }
 
   input UpdateUrlInput {
     longUrl: String
-    shortUrl: String
     slug: String
     views: Int
   }
@@ -32,5 +29,6 @@ export const schema = gql`
     createUrl(input: CreateUrlInput!): Url!
     updateUrl(id: Int!, input: UpdateUrlInput!): Url!
     deleteUrl(id: Int!): Url!
+    incrementViews(id: Int!, count: Int!): Url!
   }
 `

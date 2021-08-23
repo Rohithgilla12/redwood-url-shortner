@@ -10,7 +10,6 @@ export const QUERY = gql`
     urls {
       id
       longUrl
-      shortUrl
       slug
       views
       createdAt
@@ -24,10 +23,7 @@ export const Empty = () => {
   return (
     <div className="rw-text-center">
       {'No urls yet. '}
-      <Link
-        to={routes.newUrl()}
-        className="rw-link"
-      >
+      <Link to={routes.newUrl()} className="rw-link">
         {'Create one?'}
       </Link>
     </div>
