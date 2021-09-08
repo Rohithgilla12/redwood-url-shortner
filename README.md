@@ -1,4 +1,4 @@
-## Blog Post## Develop URL shortener application with RedwoodJS
+## Develop URL shortener application with RedwoodJS
 
 ## Introduction
 
